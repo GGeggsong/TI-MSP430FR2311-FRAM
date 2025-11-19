@@ -3,12 +3,9 @@
 #include <stdint.h>
 
 #define DATA_SIZE  5  
-#define FRAM_ADDR  0xF260
+#define FRAM_ADDR  0xF800
 
 #define DELAY_MS(ms)   __delay_cycles((uint32_t)(1000UL * (ms)))
-
-
-
 
 static void P1_0_Switch(uint8_t value){
     if(value==1)
@@ -91,3 +88,4 @@ int main(void)
         __no_operation();
     }
 }
+
